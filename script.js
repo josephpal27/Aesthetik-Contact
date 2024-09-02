@@ -1,5 +1,4 @@
 
-
 // Functionality For Footer Section
 let footIconBox = document.querySelectorAll('.footer-icon-row .footer-icon');
 let footIcon = document.querySelectorAll('.footer-icon-row .footer-icon i');
@@ -15,7 +14,6 @@ footIconBox.forEach((box, i) => {
 
 
 // ----------------------------------------------------------------------------------------------------------------------------------------
-
 
 
 // Functionality For Back to Top Btn
