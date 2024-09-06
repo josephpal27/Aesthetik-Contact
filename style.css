@@ -1,292 +1,417 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    /* font-family: "Montserrat", sans-serif; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* font-family: "Montserrat", sans-serif; */
+}
+
+::selection {
+  background-color: #ffb765;
+  color: #fff;
+}
+
+/* Navbar Styling Starts Here */
+nav {
+  padding: 1.5rem 0 !important;
+  /* background: #141414 !important; */
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500 !important;
+  /* position: absolute !important; */
+  /* top: 0; */
+  z-index: 100;
+  /* width: 100%; */
+  border-bottom: 1px solid #d3d3d33b;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #fff !important;
+}
+.navbar-nav {
+  text-align: center;
+}
+.navbar-nav .nav-link,
+.navbar-brand,
+.navbar-toggler-icon {
+  color: #f8a31c !important;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.nav-link.active {
+  /* color: rgb(54, 210, 7) !important; */
+  color: rgb(254, 186, 0) !important;
+  font-weight: 700 !important;
+}
+.navbar-nav .nav-link:hover {
+  /* color: #32c107 !important; */
+  color: rgb(254, 186, 0) !important;
+}
+
+/* Dropdown Styling */
+.navbar-nav .dropdown-menu {
+  background-color: #fff;
+  border: none;
+  box-shadow: rgba(124, 124, 124, 0.723) 0px 3px 8px;
+}
+
+.navbar-nav .dropdown-item {
+  color: #000 !important;
+  font-weight: 500 !important;
+}
+.navbar-nav .dropdown-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Nav Menu Hover Function */
+@media screen and (min-width: 992px) {
+  .navbar-nav .dropdown-menu {
+    display: none;
+    margin-top: 1px;
   }
-  
-  ::selection{
-      background-color: #ffb765;
-      color: #fff;
+  .navbar-nav .nav-link:hover ~ .dropdown-menu {
+    display: block;
   }
-  
-  /* Navbar Styling Starts Here */
+  .navbar-nav .dropdown-menu:hover {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
   nav {
-    padding: 1.5rem 0 !important;
-    /* background: #141414 !important; */
-    font-family: "Montserrat", sans-serif !important;
-    font-weight: 500 !important;
-    /* position: absolute !important; */
-    /* top: 0; */
-    z-index: 100;
-    /* width: 100%; */
-    border-bottom: 1px solid #d3d3d33b;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-color: #fff !important;
+    padding: 1rem 0 !important;
   }
   .navbar-nav {
-    text-align: center;
+    justify-content: flex-start !important;
+    text-align: left !important;
   }
-  .navbar-nav .nav-link,
-  .navbar-brand,
-  .navbar-toggler-icon {
-    color: #f8a31c !important;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-  }
-  .nav-link.active {
-    /* color: rgb(54, 210, 7) !important; */
-    color: rgb(254, 186, 0) !important;
-    font-weight: 700 !important;
-  }
-  .navbar-nav .nav-link:hover{
-    /* color: #32c107 !important; */
-    color: rgb(254, 186, 0) !important;
-  }
-  
-  /* Dropdown Styling */
-  .navbar-nav .dropdown-menu {
-    background-color: #fff;
-    border: none;
-    box-shadow: rgba(124, 124, 124, 0.723) 0px 3px 8px;
-  }
-  
-  .navbar-nav .dropdown-item {
-    color: #000 !important;
-    font-weight: 500 !important;
-  }
-  .navbar-nav .dropdown-item:hover {
-    background-color: #f9f9f9;
-  }
-  
-  /* Nav Menu Hover Function */
-  @media screen and (min-width: 992px) {
-    .navbar-nav .dropdown-menu {
-      display: none;
-      margin-top: 1px;
-    }
-    .navbar-nav .nav-link:hover ~ .dropdown-menu {
-      display: block;
-    }
-    .navbar-nav .dropdown-menu:hover {
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 992px) {
-    .navbar-nav {
-      justify-content: flex-start !important;
-      text-align: left !important;
-    }
-    .navbar .contact-btn {
-      margin: 0 !important;
-      margin-top: 1rem !important;
-    }
-  }
-  
-  /* Button Styling */
   .navbar .contact-btn {
-    margin-left: 1rem;
-    /* background-color: #2fa30c; */
-    background-color: #f8a31c;
-    color: #fff;
-    font-family: "Montserrat", sans-serif !important;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 7px;
-    font-weight: 600;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
+    margin: 0 !important;
+    margin-top: 1rem !important;
   }
-  .navbar .contact-btn:hover {
-    /* color: #31b509; */
-    background-color: #ec9100;
-    transform: translateY(-4px);
-  }
-  .navbar .contact-btn i {
-    margin-right: 0.3rem;
-  }
-  
-  /* Navbar Styling Ends Here */
+}
 
+@media screen and (max-width: 650px) {
+  nav {
+    padding: 0.8rem 0 !important;
+  }
+}
 
-  /* Top Banner Section Starts Here */
-  .banner{
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+/* Button Styling */
+.navbar .contact-btn {
+  margin-left: 1rem;
+  /* background-color: #2fa30c; */
+  background-color: #f8a31c;
+  color: #fff;
+  font-family: "Montserrat", sans-serif !important;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.navbar .contact-btn:hover {
+  /* color: #31b509; */
+  background-color: #ec9100;
+  transform: translateY(-4px);
+}
+.navbar .contact-btn i {
+  margin-right: 0.3rem;
+}
+
+/* Navbar Styling Ends Here */
+
+/* Top Banner Section Starts Here */
+.banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.banner img {
+  width: 100%;
+}
+.banner .banner-content {
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  top: 35%;
+  color: #fff;
+}
+.banner .banner-content h2 {
+  font-size: 2.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.banner .banner-content a {
+  text-decoration: none;
+  color: #fff;
+}
+.banner .banner-content span i {
+  color: #ec9100;
+  margin: 0 0.3rem;
+}
+.banner .banner-content span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+}
+
+/* Top Banner Media Queries Start Here */
+@media screen and (max-width: 800px) {
+  .banner .banner-content h2 {
+    font-size: 1.9rem;
   }
-  .banner img{
-    width: 100%;
+}
+@media screen and (max-width: 670px) {
+  .banner img {
+    height: 35vh;
   }
-  .banner .banner-content{
-    width: 30%;
-    text-align: center;
-    position: absolute;
-    left: 35%;
-    top: 35%;
-    color: #fff;
+  .banner .banner-content {
+    top: 34%;
   }
-  .banner .banner-content h2{
-    font-size: 2.3rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .banner .banner-content a{
-    text-decoration: none;
-    color: #fff;
-  }
-  .banner .banner-content span i{
-    color: #ec9100;
-    margin: 0 0.3rem;
+  .banner .banner-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
   }
   .banner .banner-content span {
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.9rem;
-  }
-  /* Top Banner Section Ends Here */
-
-
-  /* Contact Section Starts Here */
-  .contact{
-    padding: 5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-  }
-  .contact .contact-box{
-    width: 41%;
-    padding: 4rem;
-    box-shadow: rgba(0, 0, 0, 0.268) 0px 4px 12px;
-  }
-  .contact .contact-box form{
-    display: flex;
-    flex-direction: column;
-  }
-  .contact .contact-box form input, textarea{
-    margin-bottom: 2rem;
-    border: none;
-    outline: 1px solid rgb(211, 211, 211);
-    border-radius: 3px;
-    padding: 0.8rem 1rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    box-shadow: rgba(99, 99, 99, 0.095) 0px 2px 8px 0px;
-    font-size: 0.9rem;
-  }
-  .contact .contact-box form textarea{
-    min-height: 7rem;
-    max-height: 12rem;
-  }
-  .contact .contact-box form button{
-    color: #fff;
-    font-size: 0.9rem;
-    background-color: #ec9100;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    font-weight: 500;
-    width: 50%;
-    border-radius: 5px;
-    transition: all 0.2s ease;
-  }
-  .contact .contact-box form button:hover{
-    background-color: #ffa616;
-  }
-
-  .contact .contact-details{
-    width: 49%;
-  }
-  .contact .contact-details h5{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    background-image: linear-gradient(transparent, transparent, rgb(255, 210, 143));
-    width: fit-content;
-    padding: 0.3rem 1rem;
-    border-radius: 7px;
-  }
-  .contact .contact-details h1{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    margin-top: 2rem;
-    font-size: 2rem;
-  }
-  .contact .contact-details p{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    margin-top: 2rem;
-    max-width: 90%;
-    color: #686868;
-    font-size: 0.9rem;
-  }
-  .contact-card-row{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-  }
-  .contact-card{
-    display: flex;
-    justify-content: space-between;
-    width: 48%;
-  }
-  .contact-card .left{
-    width: 17%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8a31c;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: all 0.2s ease;
-  }
-  .contact-card .left:hover{
-    background-color: #1c182a;
-  }
-  .contact-card .left img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  .contact-card .right{
-    width: 77%;
-  }
-  .contact-card .right h3{
-    font-size: 1.1rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-  }
-  .contact-card .right p{
-    margin: 0;
     font-size: 0.8rem;
   }
-  /* Contact Section Ends Here */
-
-
-  /* Map Section Starts Here */
-  .map{
-    padding: 2rem 2rem 5rem 2rem;
-    overflow: hidden;
+}
+@media screen and (max-width: 450px) {
+  .banner .banner-content {
+    top: 36%;
   }
-  .map .map-box{
+  .banner .banner-content h2 {
+    font-size: 1.5rem;
+  }
+  .banner .banner-content span {
+    font-size: 0.7rem;
+  }
+}
+/* Top Banner Section Ends Here */
+
+/* Contact Section Starts Here */
+.contact {
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.contact .contact-box {
+  width: 41%;
+  padding: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.268) 0px 4px 12px;
+}
+.contact .contact-box form {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-box form input,
+textarea {
+  margin-bottom: 2rem;
+  border: none;
+  outline: 1px solid rgb(211, 211, 211);
+  border-radius: 3px;
+  padding: 0.8rem 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  box-shadow: rgba(99, 99, 99, 0.095) 0px 2px 8px 0px;
+  font-size: 0.9rem;
+}
+.contact .contact-box form textarea {
+  min-height: 7rem;
+  max-height: 12rem;
+}
+.contact .contact-box form button {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: #ec9100;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: 500;
+  width: 50%;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+.contact .contact-box form button:hover {
+  background-color: #ffa616;
+}
+
+.contact .contact-details {
+  width: 49%;
+}
+.contact .contact-details h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background-image: linear-gradient(
+    transparent,
+    transparent,
+    rgb(255, 210, 143)
+  );
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  border-radius: 7px;
+}
+.contact .contact-details h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.contact .contact-details p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 2rem;
+  max-width: 90%;
+  color: #686868;
+  font-size: 0.9rem;
+}
+.contact-card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+  position: relative;
+}
+.contact-card .left {
+  width: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8a31c;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  position: absolute;
+}
+.contact-card .left:hover {
+  background-color: #1c182a;
+}
+.contact-card .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.contact-card .right {
+  width: 77%;
+  margin-left: 22%;
+}
+.contact-card .right h3 {
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.contact-card .right p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/* Contact Media Queries Start Here */
+@media screen and (max-width: 1200px) {
+  .contact {
+    padding: 5rem 2rem;
+    flex-direction: column
+  } 
+  .contact .contact-box {
     width: 100%;
-    height: 70vh;
-    border: 3px solid #d8d8d8;
-    border-radius: 10px;
-    overflow: hidden;
+    padding: 2rem 1rem;
   }
-  /* Map Section Ends Here */
+  .contact .contact-box form input,
+textarea {
+  margin-bottom: 1.5rem;
+  padding: 0.8rem 0.6rem;
+  font-size: 0.8rem;
+}
+.contact .contact-box form button {
+  font-size: 0.7rem;
+  padding: 0.7rem 1rem;
+  width: 41%;
+}
+  .contact .contact-details {
+    width: 100%;
+    margin-top: 4rem;
+  }
+}
 
+@media screen and (max-width: 576px) {
+  .contact {
+    padding: 2rem 1rem;
+    flex-direction: column
+  } 
+  .contact .contact-box {
+    width: 100%;
+  }
+  .contact .contact-details {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .contact .contact-details h5 {
+    font-size: 1.1rem;
+  }
+  .contact .contact-details h1 {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .contact .contact-details p {
+    margin-top: 1rem;
+    max-width: 100%;
+    text-align: justify;
+    /* margin-bottom: 3rem; */
+  }
+  .contact-card-row {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .contact-card {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .contact-card .right p {
+    font-size: 0.75rem;
+  }
+}
+/* Contact Section Ends Here */
 
- /* Footer Section Starts Here */
+/* Map Section Starts Here */
+.map {
+  padding: 2rem 2rem 5rem 2rem;
+  overflow: hidden;
+}
+.map .map-box {
+  width: 100%;
+  height: 70vh;
+  border: 3px solid #d8d8d8;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Map Media Queries Start Here */
+@media screen and (max-width: 576px) {
+  .map {
+    padding: 0;
+    margin-top: 4rem;
+  }
+  .map .map-box {
+    width: 100%;
+    height: 100vh;
+    border: 0px solid #d8d8d8;
+    border-radius: 0;
+  }
+}
+/* Map Section Ends Here */
+
+/* Footer Section Starts Here */
 footer {
   /* background-color: rgb(19, 18, 48); */
   background-color: #191d29;
   padding: 3rem 0 1rem 0;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 footer .footer {
   position: relative;
@@ -379,19 +504,18 @@ footer .footer .foot-right .right-2 {
   width: 55%;
 }
 footer .footer .foot-right .right-2 .footer-input {
-  width: 90%;
+  width: 100%;
   background-color: #fff;
   padding: 6px;
   border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
   overflow: hidden;
+  position: relative;
 }
 footer .footer .foot-right .right-2 .footer-input input {
   border: none;
   outline: none;
   font-size: 0.9rem;
-  padding: 0 5px;
+  padding: 7px 5px;
 }
 footer .footer .foot-right .right-2 .footer-input button {
   background-color: #f15c06;
@@ -401,6 +525,8 @@ footer .footer .foot-right .right-2 .footer-input button {
   padding: 0.5rem 1.2rem;
   border-radius: 5px;
   transition: all 0.2s ease;
+  position: absolute;
+  right: 0.5rem;
 }
 footer .footer .foot-right .right-2 .footer-input button:hover {
   background-color: #d44e00;
@@ -411,9 +537,10 @@ footer .footer .foot-right .right-2 p {
   font-weight: 500;
 }
 footer .footer .foot-right .right-2 .footer-icon-row {
-  width: 55%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.9rem;
   margin-top: 2rem;
 }
 footer .footer .foot-right .right-2 .footer-icon-row .footer-icon {
@@ -448,35 +575,169 @@ footer .copyright p {
   margin-top: 0.7rem;
   font-size: 0.8rem;
 }
+
+/* Footer Media Queries Start Here */
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  footer .footer .foot-left .left-1 {
+    width: 62%;
+  }
+  footer .footer .foot-left .left-2 {
+    width: 33%;
+  }
+  footer .footer .foot-left .foot-card {
+    bottom: 2rem;
+    width: 62%;
+    padding: 1rem 2rem 1.5rem 1.5rem;
+  }
+  footer .footer .foot-left .foot-card p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  footer .footer .foot-right .right-1 {
+    width: 40%;
+  }
+  footer .footer .foot-right .right-2 {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  footer .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer .foot-left {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  footer .footer .foot-right {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  footer .footer .foot-right .right-1 {
+    width: 55%;
+  }
+  footer .footer .foot-right .right-2 {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  footer .footer .foot-left {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer .foot-left .left-1 {
+    width: 100%;
+  }
+  footer .footer .foot-left .foot-card {
+    width: 90%;
+  }
+  footer .footer .foot-left .left-2 {
+    width: 100%;
+    position: relative;
+    top: 17rem;
+  }
+  footer .footer .foot-right {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-top: 16rem;
+  }
+  footer .footer .foot-right {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer .foot-right .right-1 {
+    width: 100%;
+  }
+  footer .footer .foot-right .right-2 {
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+  footer .footer .foot-right .right-2 .footer-input {
+    width: 100%;
+    position: relative;
+  }
+  footer .footer .foot-right .right-2 .footer-input input {
+    padding: 7px 5px;
+  }
+  footer .footer .foot-right .right-2 .footer-input button {
+    background-color: #f15c06;
+    color: #fff;
+    font-size: 0.8rem;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    /* float: right; */
+    position: absolute;
+    right: 0.5rem;
+  }
+  footer .footer .foot-right .right-2 .footer-icon-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer{
+    margin-top: 0;
+  }
+  footer .footer .foot-left {
+    padding: 1rem;
+  }
+  footer .footer .foot-left .foot-card {
+    width: 90%;
+  }
+  footer .footer .foot-left .foot-card h3 {
+    font-size: 1.2rem !important;
+  }
+  footer .footer .foot-left .foot-card p {
+    font-size: 1rem;
+  }
+  footer .footer h5 {
+    font-size: 1.1rem;
+  }
+  footer .footer a p {
+    font-size: 0.9rem;
+  }
+  footer .footer .foot-right {
+    padding: 1rem;
+  }
+}
 /* Footer Section Ends Here */
 
-
-  /* Back to Top Section */
-.back-to-top{
-    position: fixed;
-    right: 1.3rem;
-    bottom: -5rem;
-    padding: 0.5rem;
-    text-align: center;
-    transition: all 0.4s ease-in-out;
-  }
-  .back-to-top.show {
-    bottom: 1.1rem;
-  }
-  .back-to-top i{
-    color: #fff;
-    font-size: 1.2rem;
-    border: 2px solid #fff;
-    background-color: #ff8400;
-    width: 2rem;
-    height: 2rem;
-    padding-top: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255, 0.442) 0px 3px 8px;
-    transition: all 0.2s ease-in-out;
-  }
-  .back-to-top i:hover{
-    background-color: #ffa628;
-  }
-  /* Back to Top Section */
+/* Back to Top Section */
+.back-to-top {
+  position: fixed;
+  right: 1.3rem;
+  bottom: -5rem;
+  padding: 0.5rem;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+.back-to-top.show {
+  bottom: 1.1rem;
+}
+.back-to-top i {
+  color: #fff;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  background-color: #ff8400;
+  width: 2rem;
+  height: 2rem;
+  padding-top: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: rgba(255, 255, 255, 0.442) 0px 3px 8px;
+  transition: all 0.2s ease-in-out;
+}
+.back-to-top i:hover {
+  background-color: #ffa628;
+}
+/* Back to Top Section */
